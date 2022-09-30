@@ -11,9 +11,6 @@ SCK::Socket::Socket(int domain, int socket_type, int protocol, int port, u_long 
     //establishing socket
     sock = socket(domain, socket_type, protocol);
     test_connection(sock);
-    //establishing network connection
-    connection = connect_to_network(sock, address);
-    test_connection(connection);
 }
 
 //virtual function, confirms socket or connection has been properly made
@@ -39,4 +36,8 @@ int SCK::Socket::get_sock() {
 
 int SCK::Socket::get_connection() {
     return connection;
+}
+
+void SCK::Socket::set_connection(int _connection) {
+    connection = _connection;
 }

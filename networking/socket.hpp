@@ -25,9 +25,14 @@ class Socket {
 
         struct sockaddr_in get_address();
 
+        //getters
         int get_sock();
 
         int get_connection();
+
+        //setters
+
+        void set_connection(int);
         
 };
 
