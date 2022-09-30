@@ -1,4 +1,4 @@
-#include <BindingSocket.hpp>
+#include <binding_socket.hpp>
 
 SCK::BindingSocket::BindingSocket(int domain, int socket_type, int protocol, int port, u_long interface) 
                                     : Socket(domain, socket_type, protocol, port, interface) {
